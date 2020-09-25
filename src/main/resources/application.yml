@@ -1,0 +1,17 @@
+server:
+  port: 8881
+
+spring:
+  application:
+    name: config-client
+
+  client:
+    serviceUrl:
+      defaultZone: http://172.16.10.1:8761/eureka/,http://172.16.10.6:8761/eureka/
+
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: configserver
+
